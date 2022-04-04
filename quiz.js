@@ -173,7 +173,7 @@ function renderQuestions () {
         answersEl.appendChild(li);
     });
 }
-
+// function to end the quiz
 function endQuiz () {
     window.alert('end')
     renderForm()
@@ -189,18 +189,18 @@ function endQuiz () {
 }
 
 
-
+// save the correct count
     
 function setCorrect () {
     correctScore.textContent = correct;
     localStorage.setItem('winCount', JSON.stringify(correct));
 }
-
+// save the wrong count
 function setWrong () {
     wrongScore.textContent = wrong;
     localStorage.setItem('loseCount', JSON.stringify(wrong));
 }
-
+//show the correct count
 function getCorrect () {
     var storedCorrect = localStorage.getItem('winCount');
     if (storedCorrect === null) {
@@ -213,7 +213,7 @@ function getCorrect () {
 
     correctScore.textContent = 'Right: ' + correct;
 }
-
+//show the wrong count
 function getWrong () {
     var storedWrong = localStorage.getItem('loseCount');
     if (storedWrong === null) {
@@ -224,9 +224,9 @@ function getWrong () {
 
     wrongScore.textContent = 'wrong: ' + wrong;
 }
-
+// show the high Score
 function renderHighscore() {
-    
+    highScore = (correct - wrong)
     localStorage.setItem('highscore', JSON.stringify(highScore));
     localStorage.getItem('highscore');
     highScore.textContent = 'High Score: ' + (correct - wrong);
@@ -242,7 +242,7 @@ function renderForm() {
     FN.setAttribute('type', 'text');
     FN.setAttribute('name', 'FullName');
     FN.setAttribute('placeholder', 'Full Name');
-    //FN = FN.value;
+    
 
     var submit = document.createElement('input')
     submit.setAttribute('type', 'submit');
@@ -256,7 +256,7 @@ function renderForm() {
             var bestScore = JSON.parse(localStorage.getItem("highscore"));
             if (bestScore !== null) {
               document.querySelector(".message").textContent = FN.value + 
-              " received a/an " + (correct - wrong)
+              " received a high score of " + (correct - wrong)
             }
           }
 
