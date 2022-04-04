@@ -110,7 +110,7 @@ function startQuiz () {
     
 };
 
-
+// event listener to start the quiz
 
 startButton.addEventListener('click', function (event){
     event.preventDefault();
@@ -119,7 +119,7 @@ startButton.addEventListener('click', function (event){
 
 })
         
-
+// function to move between screens and gather scores
 function compare (e) {
     var answerClicked = e.target.innerHTML
 
@@ -232,7 +232,7 @@ function renderHighscore() {
     highScore.textContent = 'High Score: ' + (correct - wrong);
     
 }
-
+// dynamically made form to submit initials at the end
 function renderForm() {
     var form = document.createElement('form');
     form.className = 'userform'
