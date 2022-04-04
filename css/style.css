@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+.game-prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 10%;
+    border: solid;
+    margin: 10% 10%;
+    border-radius: 20px;
+
+}
+
+.game-prompt h1  {
+    font-size: 2rem;
+    margin: 5rem;
+}
+
+.game-prompt p {
+    display: flex;
+    flex-direction: wrap;
+    font-size: 2rem;
+    margin: 0 20rem;
+}
+
+#startQuiz {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    border-radius: 10%;
+    background-color: red;
+}
+header h1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+
+}
+#timer {
+   font-size: 1.2rem;
+   position: absolute;
+   right: 10%;
+   margin-top: 0%;
+}
+
+
+header h1 {
+    font-size: 2rem;
+    margin: 0 1rem
+}
+
+.questions div {
+    position: relative;
+    border: solid;
+    padding: 70px;
+    border-radius: 5px;
+    margin: 10% 10%;
+    display: none;
+    
+}
+
+.questions h1{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2rem;
+}
+
+
+.questions button{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 1rem;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+
+.high-score h2 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+
+@media screen and (min-width: 400px) {
+    
+    .game-prompt h1 {
+        margin: 8%;
+    }
+    
+    
+    .game-prompt p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        margin: 0% 10%;
+        border-radius: 20px;
+        font-size: 1.2rem;
+    
+    }
+
+    header {
+        display: relative;
+        left: 24%;
+    }
+
+
+
+
+}
